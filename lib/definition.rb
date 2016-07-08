@@ -3,11 +3,11 @@ require('pry')
 class Definition
   @@definitions = []
 
-  attr_reader(:part_of_speech, :definition, :example_sentence, :id)
+  attr_reader(:part_of_speech, :definition_main, :example_sentence, :id)
 
   define_method(:initialize) do |attributes|
     @part_of_speech = attributes.fetch(:part_of_speech)
-    @definition = attributes.fetch(:definition)
+    @definition_main = attributes.fetch(:definition_main)
     @example_sentence = attributes.fetch(:example_sentence)
     @id = @@definitions.length().+(1)
   end

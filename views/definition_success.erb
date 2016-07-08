@@ -1,0 +1,9 @@
+<h1>Congratulations! You have successfully added a definition for the word <%= @word.name()%></h1>
+<ul>
+  <li>Part of Speech: <%= @part_of_speech%></li>
+  <li>Definition: <%= @definition_main%></li>
+  <li>Example Sentence: <em><%= @example_sentence%></em></li>
+</ul>
+<a href='/words/<%=@word.id()%>/definitions/new'>Add Another Definition</a>
+<a href='/words/<%=@word.id()%>'>See All Definitions for <%= @word.name()%></a>
+<a href='/'>Back to All Words</a>

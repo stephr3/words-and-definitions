@@ -22,7 +22,6 @@ end
 describe('the add a definition path', {:type => :feature}) do
   it('allows user to add a definition to a word and confirm the definition has been added') do
     visit('/')
-save_and_open_page
     click_link('Cat')
     expect(page).to have_content('Cat')
     click_link('Add a Definition')
