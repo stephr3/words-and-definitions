@@ -14,7 +14,7 @@ _This application will store words that the user inputs. For each word, the user
 * Run bundle install in your project directory to ensure all gems are installed.
 * Run ruby app.rb in your project directory to start Sinatra
 * Open a browser of your choice to localhost:4567
-* You can also check out the page here: <#>
+* You can also check out the page here: <https://sgurung-words-definitions.herokuapp.com/>
 
 ## Technologies Used
 
