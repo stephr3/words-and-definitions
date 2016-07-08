@@ -22,4 +22,14 @@ class Word
   define_singleton_method(:all) do
     @@words
   end
+
+  define_singleton_method(:find) do |id_number|
+    found_word = nil
+    @@words.each() do |word|
+      if word.id().==(id_number.to_i())
+        found_word = word
+      end
+    end
+    found_word
+  end
 end

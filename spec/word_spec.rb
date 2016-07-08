@@ -47,4 +47,14 @@ describe(Word) do
       expect(test_word2.id()).to(eq(2))
     end
   end
+
+  describe('.find') do
+    it('searches for and returns a word based on its unique id') do
+      test_word1 = Word.new({:word => 'Cat'})
+      test_word1.save()
+      test_word2 = Word.new({:word => 'Dog'})
+      test_word2.save()
+      expect(Word.find(2)).to(eq(test_word2))
+    end
+  end
 end
