@@ -52,6 +52,16 @@ describe(Word) do
     end
   end
 
+  describe('#meanings') do
+    it('returns an array of definitions for the word') do
+      test_word = Word.new({:name => 'Cat'})
+      test_word.save()
+      test_definition = Definition.new({:part_of_speech => 'Noun', :definition_main => 'An animal with four legs, whiskers, and a tail.', :example_sentence => 'The cat meowed by the door all night.'})
+      test_word.add_definition(test_definition)
+      expect(test_word.meanings()).to(eq([test_definition]))
+    end
+  end
+
   describe('.find') do
     it('searches for and returns a word based on its unique id') do
       test_word1 = Word.new({:name => 'Cat'})

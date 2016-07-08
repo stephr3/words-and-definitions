@@ -1,13 +1,10 @@
 <h1><%= @word.name() %></h1>
+<h1><%= @word.meanings() %></h1>
+<h1><%= @word.id() %></h1>
+<br>
+<h1><%= @word.meanings()[0].part_of_speech() %></h1>
 
-<%if @word.definitions().length().>(0)%>
-<%@word.definitions().each() do |definition| %>
-<ul>
-  <li>Part of Speech: <%= definition.part_of_speech() %></li>
-  <li>Definition: <%= definition.main_definition() %></li>
-  <li>Example Sentence: <em><%= definition.example_sentence() %></em></li>
-<ul>
-<%end%>
-<%end%>
+
+
 <a href='/words/<%=@word.id()%>/definitions/new'>Add a Definition</a>
 <a href='/'>Back to Words</a>

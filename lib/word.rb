@@ -3,11 +3,11 @@ require('pry')
 class Word
   @@words = []
 
-  attr_reader(:name, :definitions, :id)
+  attr_reader(:name, :meanings, :id)
 
   define_method(:initialize) do |attributes|
     @name = attributes.fetch(:name)
-    @definitions = []
+    @meanings = []
     @id = @@words.length().+(1)
   end
 
@@ -34,6 +34,6 @@ class Word
   end
 
   define_method(:add_definition) do |definition|
-    @definitions.push(definition)
+    @meanings.push(definition)
   end
 end

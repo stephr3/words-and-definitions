@@ -32,4 +32,10 @@ describe('the add a definition path', {:type => :feature}) do
     click_button('Add Definition')
     expect(page).to have_content('The cat meowed by the door all night.')
   end
+
+  it('allows user to view a list of definitions that have been added for a word') do
+    visit('/')
+    click_link('Cat')
+    expect(page).to have_content('The cat meowed by the door all night.')
+  end
 end
