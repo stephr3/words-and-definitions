@@ -24,13 +24,13 @@ class Definition
     @@definitions
   end
 
-  define_singleton_method(:find) do |id_number|
-    found_definition = nil
-    @@definitions.each() do |definition|
-      if definition.id().==(id_number.to_i())
-        found_definition = definition
-      end
-    end
-    found_definition
-  end
+  # define_singleton_method(:find) do |id_number|
+  #   found_definition = nil
+  #   @@definitions.each() do |definition|
+  #     if definition.id().==(id_number.to_i())
+  #       found_definition = definition
+  #     end
+  #   end
+  #   found_definition
+  # end
 end
