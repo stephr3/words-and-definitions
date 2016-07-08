@@ -3,7 +3,7 @@ require('pry')
 class Definition
   @@definitions = []
 
-  attr_reader(:part_of_speech, :definition, :example_sentence)
+  attr_reader(:part_of_speech, :definition, :example_sentence, :id)
 
   define_method(:initialize) do |attributes|
     @part_of_speech = attributes.fetch(:part_of_speech)
@@ -14,5 +14,9 @@ class Definition
 
   define_method(:save) do
     @@definitions.push(self)
+  end
+
+  define_singleton_method(:clear) do
+    @@definitions = []
   end
 end
