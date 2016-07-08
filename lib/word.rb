@@ -3,10 +3,10 @@ require('pry')
 class Word
   @@words = []
 
-  attr_reader(:word, :definitions, :id)
+  attr_reader(:name, :definitions, :id)
 
   define_method(:initialize) do |attributes|
-    @word = attributes.fetch(:word)
+    @name = attributes.fetch(:name)
     @definitions = []
     @id = @@words.length().+(1)
   end
