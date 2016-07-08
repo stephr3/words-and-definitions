@@ -1,12 +1,23 @@
 <%if @words.length().>(0)%>
-<h1>Words:</h1>
-<ul>
-  <%@words.each() do |word|%>
-  <li><a href='/words/<%= word.id() %>'><%= word.name() %></a></li>
-  <%end%>
-</ul>
+  <h1>Here are your words:</h1>
+  <img src="img/ice-cream.jpg" class="centered">
+  <div class="results-div">
+    <ul>
+      <%@words.each() do |word|%>
+      <li><a href='/words/<%= word.id() %>'><%= word.name() %></a></li>
+      <%end%>
+    </ul>
+  </div>
+  <div class='centered'>
+    <a href='/words/new'>Add Another Word</a>
+  </div>
 <%else%>
-<h1>Welcome to Words &amp; Definitions!</h1>
+<div class="jumbotron">
+  <h1>Welcome to Words &amp; Definitions!</h1>
+</div>
+<img src="img/ice-cream.jpg" class="centered">
+<br>
+<div class='centered'>
+  <a href='/words/new'>Add a Word</a>
+</div>
 <%end%>
-
-<a href='/words/new'>Add a Word</a>

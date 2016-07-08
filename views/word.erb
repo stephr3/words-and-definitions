@@ -1,14 +1,17 @@
 <h1><%= @word.name() %></h1>
+<div class="results-div">
+  <%@word.meanings().each() do |meaning, i|%>
+  <ul>
+    <li><strong>Definition</strong></li>
+    <li>Part of Speech: <%=meaning.part_of_speech()%></li>
+    <li>Definition: <%=meaning.definition_main()%></li>
+    <li>Example Sentence: <%=meaning.example_sentence()%></li>
+  </ul>
+  <br>
+  <%end%>
+</div>
 
-<%@word.meanings().each() do |meaning, i|%>
 <ul>
-  <li>Definition</li>
-  <li>Part of Speech: <%=meaning.part_of_speech()%></li>
-  <li>Definition: <%=meaning.definition_main()%></li>
-  <li>Example Sentence: <%=meaning.example_sentence()%></li>
+  <li><a href='/words/<%=@word.id()%>/definitions/new'>Add a Definition</a></li>
+  <li><a href='/'>Home</a></li>
 </ul>
-<%end%>
-
-
-<a href='/words/<%=@word.id()%>/definitions/new'>Add a Definition</a>
-<a href='/'>Back to Words</a>

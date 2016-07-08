@@ -1,6 +1,10 @@
-<h1>Congratulations!</h1>
-<h3>You have successfully added your word, <%= @name %></h3>
-
-<a href='/'>Home</a>
-<a href='/words/new'>Add Another Word</a>
-<a href ='/words/<%=@word.id()%>/definitions/new'>Add a definition for <%= @name %></a>
+<div class="container">
+  <h1>Congratulations!</h1>
+  <img src="img/ice-cream.jpg" class="centered">
+  <h3>You have successfully added your word, <%= @name %>.</h3>
+  <ul>
+    <li><a href='/'>Home</a></li>
+    <li><a href='/words/new'>Add Another Word</a></li>
+    <li><a href ='/words/<%=@word.id()%>/definitions/new'>Add a Definition for <%= @name %></a></li>
+  </ul>
+</div>
