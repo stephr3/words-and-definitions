@@ -50,4 +50,14 @@ describe(Definition) do
       expect(Definition.all()).to(eq([test_definition]))
     end
   end
+
+  describe('#id') do
+    it('returns a unique id for a definition') do
+      test_definition1 = Definition.new({:part_of_speech => 'Noun', :definition => 'An animal with four legs, whiskers, and a tail.', :example_sentence => 'The cat meowed by the door all night.'})
+      test_definition1.save()
+      test_definition2 = Definition.new({:part_of_speech => 'Noun', :definition => 'An unusually cool person.', :example_sentence => "The cool cat stood by the jazz club entrance, gazing through his dark sunglasses and giving a head nod to passersby."})
+      test_definition2.save()
+      expect(test_definition2.id()).to(eq(2))
+    end
+  end
 end
