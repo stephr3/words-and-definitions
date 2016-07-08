@@ -19,4 +19,8 @@ class Definition
   define_singleton_method(:clear) do
     @@definitions = []
   end
+
+  define_singleton_method(:all) do
+    @@definitions
+  end
 end
