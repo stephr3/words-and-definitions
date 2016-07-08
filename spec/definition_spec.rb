@@ -64,14 +64,4 @@ describe(Definition) do
       expect(test_definition2.id()).to(eq(2))
     end
   end
-
-  # describe('.find') do
-  #   it('searches for and returns a definition based on its unique id') do
-  #     test_definition1 = Definition.new({:part_of_speech => 'Noun', :definition_main => 'An animal with four legs, whiskers, and a tail.', :example_sentence => 'The cat meowed by the door all night.'})
-  #     test_definition1.save()
-  #     test_definition2 = Definition.new({:part_of_speech => 'Noun', :definition_main => 'An unusually cool person.', :example_sentence => "The cool cat stood by the jazz club entrance, gazing through his dark sunglasses and giving a head nod to passersby."})
-  #     test_definition2.save()
-  #     expect(Definition.find(2)).to(eq(test_definition2))
-  #   end
-  # end
 end

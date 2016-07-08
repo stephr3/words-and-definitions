@@ -14,7 +14,8 @@ end
 
 post('/words') do
   @name = params.fetch('name')
-  @word = Word.new({:name => @name}).save()
+  @word = Word.new({:name => @name})
+  @word.save()
   erb(:word_success)
 end
 
