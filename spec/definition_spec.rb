@@ -22,4 +22,11 @@ describe(Definition) do
       expect(test_definition.example_sentence()).to(eq('The cat meowed by the door all night.'))
     end
   end
+
+  describe('#save') do
+    it('saves the definition in an array of definitions') do
+      test_definition = Definition.new({:part_of_speech => 'Noun', :definition => 'An animal with four legs, whiskers, and a tail.', :example_sentence => 'The cat meowed by the door all night.'})
+      expect(test_definition.save()).to(eq([test_definition]))
+    end
+  end
 end
