@@ -3,6 +3,11 @@ require('word')
 require('definition')
 
 describe(Word) do
+
+  before() do
+    Word.clear()
+  end
+
   describe('#word') do
     it('returns the word') do
       test_word = Word.new({:word => 'Cat'})
@@ -30,6 +35,16 @@ describe(Word) do
       test_word = Word.new({:word => 'Cat'})
       test_word.save()
       expect(Word.all()).to(eq([test_word]))
+    end
+  end
+
+  describe('#id') do
+    it('returns a unique id for a word') do
+      test_word1 = Word.new({:word => 'Cat'})
+      test_word1.save()
+      test_word2 = Word.new({:word => 'Dog'})
+      test_word2.save()
+      expect(test_word2.id()).to(eq(2))
     end
   end
 end
